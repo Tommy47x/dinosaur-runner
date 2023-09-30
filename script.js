@@ -106,4 +106,10 @@ function endGame() {
   gameStarted = false; //Stopping the game
   clearInterval(jumpDinosaur);
   clearInterval(fallDinosaur);
+  document.getElementById("start-message").innerHTML = `Game Over! Press Space to Restart!`;
+  document.addEventListener('keydown', (e) => {
+    if (e.key === ' ') {
+      location.reload();
+    }
+  });
 }

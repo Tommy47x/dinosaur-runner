@@ -1,0 +1,46 @@
+body {
+    background-color: #f7f7f7;
+}
+
+.game-container {
+    position: relative;
+    width: 400px;
+    height: 250px;
+    background-color: #fff;
+    border: 2px solid #000;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.dinosaur {
+    position: absolute;
+    bottom: 0;
+    left: 20px;
+    width: 50px;
+    height: 50px;
+    background-color: #009688;
+    border-radius: 50%;
+}
+
+.obstacle {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 20px;
+    height: 50px;
+    background-color: #e74c3c;
+    
+}
+
+.score {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.message {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 20px;
+    font-weight: bold;
+}

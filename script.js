@@ -21,7 +21,7 @@ startGameOnSpacePress();
 
 // Function that starts the game
 function startGame() {
-  obstacleRun(); // Appeal the method on-start that makes obstacles move
+  obstacleAnimation(); // Appeal the method on-start that makes obstacles move
   if (gameStarted) return; // If the game started, do nothing
   gameStarted = true;
   document.addEventListener('keydown', (e) => {
@@ -66,7 +66,7 @@ function fallDinosaur() {
 
 let gameEnded = false;
 // Function that moves the obstacles
-function obstacleRun() {
+function obstacleAnimation() {
   if (gameEnded) return;
   const obstacleWidth = 20; // Obstacle width
   if (obstaclePositionX <= -obstacleWidth) {
@@ -75,7 +75,7 @@ function obstacleRun() {
     obstaclePositionX -= 5; //Move obstacle to left
     obstacle.style.left = obstaclePositionX + 'px';
   }
-  requestAnimationFrame(obstacleRun); // Animation continues
+  requestAnimationFrame(obstacleAnimation); // Animation continues
 }
 
 setInterval(checkCollision, 100); // Interval that checks the collisions
